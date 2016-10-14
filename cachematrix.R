@@ -12,10 +12,10 @@ makeCacheMatrix <- function(x = matrix()) {
         }
         get <- function() x     # assignes the getter with x form the parent enviroment
         set_inverse_matrix <- function(inverse) m <<- inverse # assignes
-        get_inverse_matrix <- function()        # defines the getter for the inverse Matrix
-        list(set = set, get = get    #makes a list with the function we set and name them
+        get_inverse_matrix <- function() m     # defines the getter for the inverse Matrix
+        list(set = set, get = get,
              set_inverse_matrix = set_inverse_matrix,
-             get_inverse_matrix = get_inverse_matrix)
+             get_inverse_matrix = get_inverse_matrix) #makes a list with the function we set and name them
 }
 
 
